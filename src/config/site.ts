@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     "Full-stack developer specializing in building modern, scalable web applications with clean code and exceptional user experiences.",
   url: "https://hasnain-tanoli.vercel.app",
-  email: "hasnaintanoli@gmail.com", // Update with your actual email
+  email: "contact.hasnaintanoli@gmail.com", // Update with your actual email
   location: "Pakistan",
   available: true,
   resumeUrl: "/resume.pdf", // Add your resume
