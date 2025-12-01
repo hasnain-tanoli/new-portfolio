@@ -38,9 +38,9 @@ export default function GitHubGraph() {
   return (
     <div className="card">
       <h3 className="text-lg font-semibold mb-4">GitHub Contributions</h3>
-      <div className="flex flex-col space-y-1">
-        <div className="flex space-x-1">
-          {contributions.slice(0, 10).map((week, weekIndex) => (
+      <div className="overflow-x-auto">
+        <div className="flex space-x-1 min-w-max">
+          {contributions.map((week, weekIndex) => (
             <div key={weekIndex} className="flex flex-col space-y-1">
               {week.map((level, dayIndex) => (
                 <div
@@ -52,10 +52,10 @@ export default function GitHubGraph() {
             </div>
           ))}
         </div>
-        <p className="text-sm text-muted-foreground mt-2">
-          1,234 contributions in the last year
-        </p>
       </div>
+      <p className="text-sm text-muted-foreground mt-2">
+        1,234 contributions in the last year
+      </p>
     </div>
   );
 }

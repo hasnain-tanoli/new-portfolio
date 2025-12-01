@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import GitHubGraph from "@/components/GitHubGraph";
+import PulsingBrackets from "@/components/PulsingBrackets";
+import CommitHistory from "@/components/CommitHistory";
 import { siteConfig, skills, experiences, education, uses } from "@/config/site";
 
 export default function InfoPage() {
@@ -41,9 +43,18 @@ export default function InfoPage() {
           </div>
         </div>
 
-        {/* GitHub Graph */}
+        {/* GitHub Section */}
         <div className="mb-16">
-          <GitHubGraph />
+          <h2 className="text-2xl font-semibold mb-6">GitHub Activity</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="card">
+              <GitHubGraph />
+            </div>
+            <div className="card">
+              <h3 className="text-lg font-semibold mb-4">Recent Commits</h3>
+              <CommitHistory />
+            </div>
+          </div>
         </div>
 
         {/* Experience Section */}
@@ -70,7 +81,9 @@ export default function InfoPage() {
 
         {/* Skills Section */}
         <div className="mb-16">
-          <h2 className="text-2xl font-semibold mb-6">Skills</h2>
+          <h2 className="text-2xl font-semibold mb-6 flex items-center">
+            Skills <PulsingBrackets />
+          </h2>
           <div className="card">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[

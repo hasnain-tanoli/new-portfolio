@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
+import TerminalCursor from "./TerminalCursor";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { navLinks } from "@/config/site";
@@ -30,9 +31,9 @@ export default function Header() {
           {/* Logo */}
           <Link 
             href="/" 
-            className="text-xl font-bold tracking-tight text-foreground"
+            className="text-xl font-bold tracking-tight text-foreground flex items-center"
           >
-            Portfolio
+            Portfolio<TerminalCursor />
           </Link>
 
           {/* Desktop Navigation */}

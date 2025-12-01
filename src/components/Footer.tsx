@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { FaGithub, FaLinkedinIn, FaTwitter, FaEnvelope } from "react-icons/fa";
 import SpotifyNowPlaying from "@/components/SpotifyNowPlaying";
 import { siteConfig } from "@/config/site";
 
@@ -24,10 +25,10 @@ export default function Footer() {
   };
 
   const socialLinks = [
-    { name: "GitHub", url: siteConfig.links.github, icon: "GH" },
-    { name: "LinkedIn", url: siteConfig.links.linkedin, icon: "LI" },
-    { name: "Twitter", url: siteConfig.links.twitter, icon: "TW" },
-    { name: "Email", url: siteConfig.links.email, icon: "EM" },
+    { name: "GitHub", url: siteConfig.links.github, icon: <FaGithub size={24} /> },
+    { name: "LinkedIn", url: siteConfig.links.linkedin, icon: <FaLinkedinIn size={24} /> },
+    { name: "Twitter", url: siteConfig.links.twitter, icon: <FaTwitter size={24} /> },
+    { name: "Email", url: siteConfig.links.email, icon: <FaEnvelope size={24} /> },
   ];
 
   return (
@@ -57,7 +58,7 @@ export default function Footer() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary w-10 h-10 flex items-center justify-center p-0"
+                  className="btn btn-primary w-12 h-12 flex items-center justify-center p-0"
                   aria-label={link.name}
                 >
                   {link.icon}

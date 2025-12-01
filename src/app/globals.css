@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import "tailwindcss";
 
 /*
@@ -18,11 +19,11 @@
   --secondary-foreground: #0a0a0b;
   --muted: #232328;
   --muted-foreground: #a1a1aa;
-  --accent: #22d3ee;
+  --accent: #10b981;
   --accent-foreground: #0a0a0b;
   --border: #232328;
   --input: #232328;
-  --ring: #22d3ee;
+  --ring: #10b981;
   --radius: 0.5rem;
   --success: #4ade80;
   --error: #f87171;
@@ -44,11 +45,11 @@
   --secondary-foreground: #fafafa;
   --muted: #e4e4e7;
   --muted-foreground: #52525b;
-  --accent: #0891b2;
+  --accent: #059669;
   --accent-foreground: #fafafa;
   --border: #e4e4e7;
   --input: #e4e4e7;
-  --ring: #0891b2;
+  --ring: #059669;
   --success: #4ade80;
   --error: #f87171;
 }
@@ -74,8 +75,8 @@
   --color-success: var(--success);
   --color-error: var(--error);
   --radius: var(--radius);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-inconsolata); /* Changed from geist-mono to inconsolata */
+  --font-sans: 'Source Code Pro', monospace;
+  --font-mono: 'Source Code Pro', monospace;
 }
 
 body {
@@ -219,8 +220,29 @@ body {
   padding: 8px;
   z-index: 1000;
   transition: top 0.2s ease;
+  /* Hide visually but keep accessible to screen readers */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
 }
 
 .skip-link:focus {
   top: 0;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: visible;
+  padding: 8px;
+}
+
+.skip-link:hover {
+  top: 0;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: visible;
+  padding: 8px;
 }

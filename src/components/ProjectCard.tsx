@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { FaExternalLinkAlt, FaCode } from "react-icons/fa";
 
 interface ProjectCardProps {
   title: string;
@@ -44,9 +45,10 @@ export default function ProjectCard({
             href={demoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary text-sm"
+            className="flex items-center justify-center gap-2 px-4 py-2 bg-accent text-accent-foreground rounded-md hover:bg-accent/90 transition-colors text-sm font-medium flex-1"
           >
-            Live Demo ↗
+            <FaExternalLinkAlt size={12} />
+            <span>Live Demo</span>
           </Link>
         )}
         {sourceUrl && (
@@ -54,9 +56,10 @@ export default function ProjectCard({
             href={sourceUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn text-sm border border-border bg-card hover:bg-muted"
+            className="flex items-center justify-center gap-2 px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent/10 transition-colors text-sm font-medium flex-1"
           >
-            Source Code ↗
+            <FaCode size={12} />
+            <span>Source</span>
           </Link>
         )}
       </div>

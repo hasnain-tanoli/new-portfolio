@@ -1,8 +1,9 @@
 "use client";
 
-import WaveEmoji from "@/components/WaveEmoji";
 import ProjectCard from "@/components/ProjectCard";
 import BlogCard from "@/components/BlogCard";
+import RotatingGear from "@/components/RotatingGear";
+import CodeTyping from "@/components/CodeTyping";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { siteConfig, projects, blogPosts } from "@/config/site";
@@ -24,12 +25,15 @@ export default function Home() {
         transition={{ duration: 0.5 }}
       >
         <h1 className="hero-title mb-6">
-          Hi, I'm <span className="text-accent">{siteConfig.name}</span> <WaveEmoji />
+          Hi, I'm <span className="text-accent">{siteConfig.name}</span>
         </h1>
         <p className="subtitle mb-2">{siteConfig.title} based in {siteConfig.location}</p>
         <p className="body-text text-muted-foreground max-w-2xl mx-auto mb-8">
           {siteConfig.description}
         </p>
+        <div className="max-w-2xl mx-auto mb-8">
+          <CodeTyping />
+        </div>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link href="/projects" className="btn btn-primary">
             View Projects
@@ -47,7 +51,9 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
-        <h2 className="section-title mb-6">Currently</h2>
+        <h2 className="section-title mb-6 flex items-center justify-center">
+          Currently <RotatingGear size={20} className="ml-2" />
+        </h2>
         <div className="card">
           <ul className="space-y-3">
             <li className="flex items-start">
