@@ -55,6 +55,7 @@ export default function CustomCursor() {
       style={{
         transform: "translate(-50%, -50%)",
         transition: "transform 0.1s ease, opacity 0.3s ease",
+        mixBlendMode: "difference",
       }}
     />
   );

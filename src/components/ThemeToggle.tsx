@@ -14,7 +14,7 @@ export default function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <button className="relative rounded-full p-2 text-foreground transition-colors hover:bg-gray-200 dark:hover:bg-gray-700">
+      <button className="relative rounded-full p-2 text-foreground transition-colors hover:bg-accent/10">
         <div className="w-5 h-5" />
       </button>
     );
@@ -29,7 +29,7 @@ export default function ThemeToggle() {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={toggleTheme}
-      className="relative rounded-full p-2 text-foreground transition-colors hover:bg-gray-200 dark:hover:bg-gray-700"
+      className="relative rounded-full p-2 text-foreground transition-colors hover:bg-accent/10"
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
     >
       {theme === "dark" ? (

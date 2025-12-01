@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import GitHubGraph from "@/components/GitHubGraph";
+import GitHubStatsComponent from "@/components/GitHubStats";
+import GitHubRepos from "@/components/GitHubRepos";
 import PulsingBrackets from "@/components/PulsingBrackets";
 import CommitHistory from "@/components/CommitHistory";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { siteConfig, skills, experiences, education, uses } from "@/config/site";
 
 export default function InfoPage() {
@@ -46,7 +49,7 @@ export default function InfoPage() {
         {/* GitHub Section */}
         <div className="mb-16">
           <h2 className="text-2xl font-semibold mb-6">GitHub Activity</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
             <div className="card">
               <GitHubGraph />
             </div>
@@ -55,6 +58,23 @@ export default function InfoPage() {
               <CommitHistory />
             </div>
           </div>
+          <GitHubStatsComponent />
+        </div>
+
+        {/* GitHub Repositories */}
+        <div className="mb-16">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl font-semibold">GitHub Repositories</h2>
+            <a 
+              href={siteConfig.links.github} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="link-animated text-accent font-medium flex items-center"
+            >
+              View All <FaExternalLinkAlt className="ml-1 text-xs" />
+            </a>
+          </div>
+          <GitHubRepos />
         </div>
 
         {/* Experience Section */}

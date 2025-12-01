@@ -22,7 +22,7 @@ export default function ProjectCard({
   return (
     <motion.div
       className="card h-full flex flex-col"
-      whileHover={{ y: -2 }}
+      whileHover={{ y: -5 }}
       transition={{ duration: 0.2 }}
     >
       <div className="flex-grow">
@@ -45,7 +45,7 @@ export default function ProjectCard({
             href={demoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 px-4 py-2 bg-accent text-accent-foreground rounded-md hover:bg-accent/90 transition-colors text-sm font-medium flex-1"
+            className="flex items-center justify-center gap-2 px-4 py-2 bg-accent text-accent-foreground rounded-md hover:bg-accent/90 transition-all duration-200 text-sm font-medium flex-1 shadow-sm hover:shadow-md"
           >
             <FaExternalLinkAlt size={12} />
             <span>Live Demo</span>
@@ -56,7 +56,7 @@ export default function ProjectCard({
             href={sourceUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent/10 transition-colors text-sm font-medium flex-1"
+            className="flex items-center justify-center gap-2 px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent/10 transition-all duration-200 text-sm font-medium flex-1 shadow-sm hover:shadow-md"
           >
             <FaCode size={12} />
             <span>Source</span>

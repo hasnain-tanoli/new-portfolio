@@ -173,10 +173,11 @@ body {
   transition: all 0.2s ease;
   padding: 8px 16px;
   height: 40px;
+  cursor: pointer;
 }
 
 .btn:hover {
-  transform: scale(1.02);
+  transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -187,6 +188,8 @@ body {
 
 .btn-primary:hover {
   background-color: color-mix(in srgb, var(--accent) 90%, white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Link styles with underline animation */

@@ -58,7 +58,7 @@ export default function Footer() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary w-12 h-12 flex items-center justify-center p-0"
+                  className="btn btn-primary w-12 h-12 flex items-center justify-center p-0 transition-transform hover:scale-105"
                   aria-label={link.name}
                 >
                   {link.icon}
